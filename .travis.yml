@@ -28,4 +28,4 @@ after_success:
   - docker push raphman8/udagram-api-feed:v1
   - docker push raphman8/udagram-api-user:v1
   - docker push raphman8/udagram-reverseproxy:v1
-  - docker push raphman8/udagram-frontend:local
+  - docker push raphman8/udagram-frontend:v1
