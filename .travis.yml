@@ -7,31 +7,13 @@ services:
 
 # Pre-testing installs
 install:
-  - echo "nothing needs to be installed"
-
-<<<<<<< HEAD
-# Scripts to be run such as tests
-=======
-# Scripts to be run such as tests.
->>>>>>> eee692ff9f068f194adae91c41f8e6ba48028b37
+  - echo "nothing needs to be install"
 before_script:
   - echo "no tests"
 
 script:
-  - docker build -t udagram-api-feed ./udagram-api-feed
-<<<<<<< HEAD
-  - docker tag udagram-api-feed sudkul/udagram-api-feed:v1
-  - docker build -t udagram-api-user ./udagram-api-user
-  - docker tag udagram-api-user sudkul/udagram-api-user:v1
-  - docker build -t udagram-api-reverseproxy ./udagram-reverseproxy
-  - docker tag udagram-api-reverseproxy sudkul/udagram-reverseproxy:v1
-
-after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push sudkul/udagram-api-feed:v2
-  - docker push sudkul/udagram-api-user:v2
-  - docker push sudkul/udagram-reverseproxy:v2
-=======
+  - docker build -t udagram-api-feed ./udagram-api-feed
   - docker tag udagram-api-feed raphman8/udagram-api-feed:v1
   - docker build -t udagram-api-user ./udagram-api-user
   - docker tag udagram-api-user raphman8/udagram-api-user:v1
@@ -42,8 +24,7 @@ after_success:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push raphman8/udagram-api-feed:v1
-  - docker push raphman8/udagram-api-user:v1
-  - docker push raphman8/udagram-reverseproxy:v1
-  - docker push raphman8/udagram-frontend:v1
->>>>>>> eee692ff9f068f194adae91c41f8e6ba48028b37
+  - docker push raphman8/udagram-api-feed:v2
+  - docker push raphman8/udagram-api-user:v2
+  - docker push raphman8/udagram-reverseproxy:v2
+  - docker push raphman8/udagram-frontend:v2
