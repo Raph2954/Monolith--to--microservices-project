@@ -28,6 +28,6 @@ spec:
         - containerPort: 80
         envFrom:
           - configMapRef:
-              name: udagram-configmap
+             name: env-configmap
           - secretRef:
-              name: udagram-api-secret
+              name: env-secret
