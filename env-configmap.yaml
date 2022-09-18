@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 kind: ConfigMap
 apiVersion: v1
 metadata:
@@ -9,16 +8,4 @@ data:
   POSTGRES_DB: database-1
   AWS_BUCKET: udagramraph01
   AWS_REGION: us-east-1
-=======
-kind: ConfigMap
-apiVersion: v1
-metadata:
-  name: env-configmap
-data:
-  # Configuration values can be set as key-value properties
-  POSTGRES_HOST: database-1.cycczidwkpmw.us-east-1.rds.amazonaws.com
-  POSTGRES_DB: database-1
-  AWS_BUCKET: udagramraph01
-  AWS_REGION: us-east-1
->>>>>>> eee692ff9f068f194adae91c41f8e6ba48028b37
   JWT_SECRET: postgres 
