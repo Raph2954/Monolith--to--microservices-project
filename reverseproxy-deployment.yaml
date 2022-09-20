@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-reverseproxy
-        image: raphman8/udagram-reverseproxy
+        image: raphman8/udagram-reverseproxy:v2
         imagePullPolicy: Always
         ports:
         - containerPort: 80
