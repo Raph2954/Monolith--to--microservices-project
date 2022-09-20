@@ -17,13 +17,7 @@ spec:
       containers:
       - name: udagram-api-user
         image: raphman8/udagram-api-user
-        resources:
-           requests:
-                memory: "64Mi"
-                cpu: "250m"
-           limits:  
-                memory: "1024Mi"
-                cpu: "500m" 
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
         envFrom:
