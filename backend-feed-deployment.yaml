@@ -24,4 +24,4 @@ spec:
           - configMapRef:
              name: env-configmap
           - secretRef:
-              name: my-secret
+              name: env-secret
