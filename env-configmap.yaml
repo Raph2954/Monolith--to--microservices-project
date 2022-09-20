@@ -4,8 +4,8 @@ metadata:
   name: env-configmap
 data:
   # Configuration values can be set as key-value properties
-  POSTGRES_HOST: database-1.cycczidwkpmw.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: database-1.cakp7q7ljryh.us-east-1.rds.amazonaws.com
   POSTGRES_DB: database-1
-  AWS_BUCKET: udagramraph01
+  AWS_BUCKET: udagram-001
   AWS_REGION: us-east-1
   JWT_SECRET: postgres 
