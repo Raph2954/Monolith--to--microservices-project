@@ -17,6 +17,7 @@ spec:
       containers:
       - name: udagram-api-feed
         image: raphman8/udagram-api-feed
+        imagePullPolicy: Always
         resources:
            requests:
                 memory: "64Mi"
