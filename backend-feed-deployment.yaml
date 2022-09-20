@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-api-feed
-        image: raphman8/udagram-api-feed:v2
+        image: docker.io/raphman8/udagram-api-feed:v2
         imagePullPolicy: Always
         ports:
         - containerPort: 80
