@@ -1,37 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-feed
+  name: udagram-api-feed
+  labels:
+    app: udagram-api-feed
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      run: backend-feed
-  replicas: 1
+      app: udagram-api-feed
   template:
     metadata:
       labels:
-        run: backend-feed
+        app: udagram-api-feed
     spec:
-      volumes:
-        - name: aws-secret
-          secret:
-            secretName: mysecret
       containers:
-      - name: backend-feed
-        image: raphman8/udagram-api-feed:v2
-        envFrom:
-          - configMapRef:
-              name: env-configmap
-          - secretRef:
-              name: env-secret
-        volumeMounts:
-            - mountPath: '/root/.aws/'
-              name: aws-secret
-              readOnly: true
+      - name: udagram-api-feed
+        image: sraphman8/udagram-api-feed:v2
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
-        resources:
-          limits:
-            cpu: 400m
-          requests:
-            cpu: 200m
+        envFrom:
+          - configMapRef:
+             name: env-configmap
+          - secretRef:
+              name: env-secret
