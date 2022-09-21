@@ -20,6 +20,11 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+        resources:
+          limits:
+            cpu: 400m
+          requests:
+            cpu: 200m
         envFrom:
           - configMapRef:
               name: env-configmap
