@@ -9,3 +9,4 @@ data:
   AWS_BUCKET: udagram-001
   AWS_REGION: us-east-1
   JWT_SECRET: postgres 
+  URL: http://10.100.160.11:8100
