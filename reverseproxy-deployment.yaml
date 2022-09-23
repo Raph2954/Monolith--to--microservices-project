@@ -5,7 +5,7 @@ metadata:
   labels:
     app: udagram-reverseproxy
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: udagram-reverseproxy
@@ -16,16 +16,15 @@ spec:
     spec:
       containers:
       - name: udagram-reverseproxy
-        image: raphman8/udagram-reverseproxy
-        resources:
-           requests:
-                memory: "64Mi"
-                cpu: "250m"
-           limits:  
-                memory: "1024Mi"
-                cpu: "500m" 
+        image: raphman8/udagram-reverseproxy:v3
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
+        resources:
+          limits:
+            cpu: 400m
+          requests:
+            cpu: 200m
         envFrom:
           - configMapRef:
               name: env-configmap
